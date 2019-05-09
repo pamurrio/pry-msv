@@ -1,0 +1,3 @@
+void setupOximeter(){
+	 mlx.begin();
+}
