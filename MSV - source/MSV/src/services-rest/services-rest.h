@@ -4,4 +4,4 @@
 //Configuración del services REST
 void setupServicesRESTJson();
 
-void sendServicesRESTJson(string key, string value);
+void sendServicesRESTJson(String key, String value);

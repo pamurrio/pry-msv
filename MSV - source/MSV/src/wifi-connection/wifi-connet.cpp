@@ -1,6 +1,5 @@
 ﻿#include <WiFi.h> //libreria WiFi
 #include <Arduino.h>
-
 #include "wifi-connet.h"
 
 void connectWifi()

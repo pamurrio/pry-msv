@@ -5,6 +5,11 @@
 WiFiUDP ntpUDP; // Define NTP Client to get time
 NTPClient timeClient(ntpUDP); // Define NTP Client to get time
 
+void setupZoneHours(){
+  timeClient.begin(); // Initialize a NTPClient to get time
+  timeClient.setTimeOffset(-10800);  // Ajuste a Zona Horaria GMT-3
+}
+
 //obtenemos fecha dia mes y hora y se formatea
 String getDate() {
   String formattedDate;
@@ -34,14 +39,9 @@ String getDate() {
   return dayStamp + timeStamp; //fecha completa
 }
 
-void setupZoneHours(){
-  timeClient.begin(); // Initialize a NTPClient to get time
-  timeClient.setTimeOffset(-10800);  // Ajuste a Zona Horaria GMT-3
-}
-
 void updateTimeClient(){
   while (!timeClient.update()) {
       timeClient.forceUpdate();
     }
-  Serial.println(mac + getDate());
+  Serial.println(getDate());
 }

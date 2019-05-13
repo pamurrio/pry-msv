@@ -1,6 +1,6 @@
 #include <Arduino.h>
 // ASIGNACION DE PINES
-const int boton;
+int boton;
 
 void setupButton(int btnAction){
 	boton = btnAction;

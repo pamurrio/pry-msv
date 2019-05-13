@@ -1,10 +1,11 @@
 #include <HTTPClient.h>  // a definir
 #include <ArduinoJson.h> // a definir
 #include <Arduino.h>
+#include "services-rest.h"
 
 void setupServicesRESTJson(){}
 
-void sendServicesRESTJson(string key, string value){
+void sendServicesRESTJson(String key, String value){
 	 //Services REST
       HTTPClient http;
       http.begin(ENDPOINT);      //Specify request destination

@@ -1,3 +1,3 @@
-void setupZoneHours(){};
+void setupZoneHours();
 String getDate();
 void updateTimeClient();

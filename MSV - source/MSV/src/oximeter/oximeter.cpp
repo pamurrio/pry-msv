@@ -1,5 +1,7 @@
-#include "MAX30100_PulseOximeter.h"
 #include <Arduino.h>
+#include "MAX30100_PulseOximeter.h" //libreria sensor oximetro
+#include <Wire.h>
+#include "oximeter.h" 
 //// oximetro
 PulseOximeter pox;// intanciamos el oximetro
 uint32_t tsLastReport = 0;
@@ -22,8 +24,7 @@ void setupOximeter(){
 
 //// Callback (registered below) fired when a pulse is detected
 ////
-void onBeatDetected()
-{
+void onBeatDetected(){
  Serial.println("Beat!");
 }
 
