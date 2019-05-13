@@ -1,4 +1,5 @@
 #include <Adafruit_MLX90614.h> 
+#include <Arduino.h>
 
 Adafruit_MLX90614 mlx = Adafruit_MLX90614();
 float temp = 0;
@@ -19,4 +20,8 @@ void startTemperature(){
 
 float getTemperaturaMax(){
 	return temp;
+}
+
+void setTemperaturaMax(float temperature){
+	temp = temperature;
 }

@@ -1,7 +1,9 @@
+#include <Arduino.h>
 // ASIGNACION DE PINES
-const int boton = 23;
+const int boton;
 
-void setupButton(){
+void setupButton(int btnAction){
+	boton = btnAction;
 	pinMode(boton, INPUT);  // CONFIGURAR PINES COMO ENTRADAS
 }
 int getStatusButton(){

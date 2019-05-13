@@ -1,5 +1,6 @@
 #include <HTTPClient.h>  // a definir
 #include <ArduinoJson.h> // a definir
+#include <Arduino.h>
 
 void setupServicesRESTJson(){}
 
@@ -14,8 +15,7 @@ void sendServicesRESTJson(string key, string value){
       JsonObject& JSONencoder = JSONbuffer.createObject();
       char json[256];
       JSONencoder["api_key"] = API_KEY_MONIT;
-      JSONencoder["field1"] = "10";
-      JSONencoder["field2"] = "120";
+      JSONencoder[key] = value;
       JSONencoder.printTo(json, sizeof(json));
 
       int httpCode = http.POST(json);   //Send the request

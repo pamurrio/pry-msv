@@ -1,5 +1,6 @@
 #include <NTPClient.h> // a definir
 #include <WiFiUdp.h> // a definir
+#include <Arduino.h>
 
 WiFiUDP ntpUDP; // Define NTP Client to get time
 NTPClient timeClient(ntpUDP); // Define NTP Client to get time
