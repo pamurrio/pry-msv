@@ -47,7 +47,7 @@ void loopTemperature(){
         digitalWrite(PIN_LED, LOW);//apaga el led
         Serial.println(getTemperaturaMax()); //imprimo en consola la temperatura tomada
         connectWifi();
-        sendServicesRESTJson("field1", getTemperaturaMax()); // envio el dato a la API
+        sendServicesRESTJson(KEY_FIELD_TEMPERATURE, getTemperaturaMax()); // envio el dato a la API
         Serial.println(); //se deja una linea en la consola
     }
 }
