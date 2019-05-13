@@ -1,0 +1,3 @@
+
+void setupButton();
+int getStatusButton();
